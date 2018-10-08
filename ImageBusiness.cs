@@ -4,15 +4,8 @@ using Emgu.CV.Features2D;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace Scanner.BusinessLayer.BusinessLogic
@@ -82,7 +75,8 @@ namespace Scanner.BusinessLayer.BusinessLogic
 
 
             /* The matching operation, in some situation, may result in false-positive results. 
-             * For filtering out the false-positive results, David Lowe proposed a test https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf#page=20
+             * For filtering out the false-positive results, David Lowe proposed a test 
+             * https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf#page=20
              * This test rejects poor matches by computing the ratio between the best and second-best match. 
              * If the ratio is below some threshold, the match is discarded as being low-quality. */
 
@@ -119,7 +113,7 @@ namespace Scanner.BusinessLayer.BusinessLogic
             if (FilterCount >= FilterThreshold)
             {
                 // Images are similar, perform the operation you want.
-
+                l
             }
         }
     }
