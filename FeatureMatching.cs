@@ -112,7 +112,8 @@ namespace Scanner.BusinessLayer.BusinessLogic
 
             if (FilterCount >= FilterThreshold)
             {
-                // Images are similar, perform the operation you want.
+                // Images are similar, perform the operation you want. 
+
                 
             }
         }
