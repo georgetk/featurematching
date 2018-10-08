@@ -1,3 +1,3 @@
-Feature Matching with OpenCV using ORB.
+# OpenCV Feature Matching using ORB.
 
 Here, Emgu CV a .NET wrapper for OpenCV is used.
