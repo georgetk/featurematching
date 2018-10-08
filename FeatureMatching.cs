@@ -99,10 +99,10 @@ namespace Scanner.BusinessLayer.BusinessLogic
             /* matchList will now contain first 40 matches.
              * Based on my research, I had found that for qualifying as a similar image,
              * there should be atleast 10 distance values, 
-             * with distance value less than or equal to 45
-             * **In this case. Tune this to your particular situation** */
+             * with distance value less than or equal to 45 */
+                        **- In this case. Tune this to your particular situation.**
 
-            int distanceThreshold = 45;
+           int distanceThreshold = 45;
             int FilterThreshold = 10;
             int FilterCount = 0;
 
