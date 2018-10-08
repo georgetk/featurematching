@@ -15,6 +15,9 @@ namespace Scanner.BusinessLayer.BusinessLogic
         public void MatchFeatures()
         {
 
+            string PathToImage1 = "C:\\Users\\Image1.jpg";
+            string PathToImage2 = "C:\\Users\\Image2.jpg";
+
             Mat Image1 = CvInvoke.Imread(PathToImage1);
 
             /* Emgu.CV.Mat is basically a class which can store the pixel values.
