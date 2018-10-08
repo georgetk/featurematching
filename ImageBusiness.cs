@@ -15,16 +15,16 @@ namespace Scanner.BusinessLayer.BusinessLogic
         public void MatchFeatures()
         {
 
-            Mat Image1 = CvInvoke.Imread(PathToImage1); 
+            Mat Image1 = CvInvoke.Imread(PathToImage1);
 
-            /* Mat is basically a class which can store the pixel values.
+            /* Emgu.CV.Mat is basically a class which can store the pixel values.
              * Emgu.CV.CvInvoke is the library to invoke OpenCV functions. 
              * Imread loads an image from the specified path. 
              * Image1 now have the details of first image */
-        
+
             Mat Image2 = CvInvoke.Imread(PathToImage2); // Image2 now have the details of second image 
 
-            ORBDetector ORB = new ORBDetector(); // ORBDetector class. Now, ORB is an instance of the class.
+            ORBDetector ORB = new ORBDetector(); // Emgu.CV.Features2D.ORBDetector class. Now, ORB is an instance of the class.
 
             VectorOfKeyPoint KeyPoints1 = new VectorOfKeyPoint(); // KeyPoints1 - for storing the keypoints of Image1
 
@@ -113,7 +113,7 @@ namespace Scanner.BusinessLayer.BusinessLogic
             if (FilterCount >= FilterThreshold)
             {
                 // Images are similar, perform the operation you want.
-                l
+                
             }
         }
     }
