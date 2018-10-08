@@ -20,7 +20,7 @@ namespace Scanner.BusinessLayer.BusinessLogic
 
             Mat Image1 = CvInvoke.Imread(PathToImage1);
 
-            /* Emgu.CV.Mat is basically a class which can store the pixel values.
+            /* Emgu.CV.Mat is a class which can store the pixel values.
              * Emgu.CV.CvInvoke is the library to invoke OpenCV functions. 
              * Imread loads an image from the specified path. 
              * Image1 now have the details of first image */
@@ -46,7 +46,7 @@ namespace Scanner.BusinessLayer.BusinessLogic
 
 
             //Feature Extraction from Image2
-            ORB.DetectAndCompute(UploadedImage, null, observedKeyPoints, observedDescriptors, false);
+            ORB.DetectAndCompute(Image2, null, KeyPoints2, Descriptors2, false);
 
             int k = 2;
             /*  Count of best matches found per each descriptor 
@@ -97,12 +97,13 @@ namespace Scanner.BusinessLayer.BusinessLogic
             matchList = matchList.Take(40).ToList();
 
             /* matchList will now contain first 40 matches.
-             * Based on my research, I had found that for qualifying as a similar image, 
+             * Based on my research, I had found that for qualifying as a similar image (in this particular case), 
              * there should be atleast 10 distance values, 
              * with distance value less than or equal to 45 */
 
             int distanceThreshold = 45;
             int FilterThreshold = 10;
+            int FilterCount = 0;
 
             for (j = 0; j < matchList.Count; j++)
             {
@@ -116,9 +117,11 @@ namespace Scanner.BusinessLayer.BusinessLogic
             if (FilterCount >= FilterThreshold)
             {
                 // Images are similar, perform the operation you want. 
+                FilterCount = 0;
 
-                
             }
+            else
+                FilterCount = 0;
         }
     }
 }
